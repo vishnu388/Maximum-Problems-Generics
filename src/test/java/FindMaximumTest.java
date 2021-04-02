@@ -45,4 +45,25 @@ public class FindMaximumTest {
         Double result = findMax.findMaximum(doulbeArray);
         Assert.assertEquals(Double.valueOf(7.6), result);
     }
+    @Test
+    public void whenGivenThreeStrings_AndFirstStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Vishnu", "Vardhan", "Reddy"};
+        String result = findMax.findMaximum(stringArray);
+        Assert.assertEquals("Vishnu", result);
+    }
+
+    @Test
+    public void whenGivenThreeStrings_AndSecondStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Kiran", "Venkat", "Reddy"};
+        String result = findMax.findMaximum(stringArray);
+        Assert.assertEquals("Venkat", result);
+    }
+
+
+    @Test
+    public void whenGivenThreeStrings_AndThirdStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Kishore", "Jagan", "Reddy"};
+        String result = findMax.findMaximum(stringArray);
+        Assert.assertEquals("Reddy", result);
+    }
 }
