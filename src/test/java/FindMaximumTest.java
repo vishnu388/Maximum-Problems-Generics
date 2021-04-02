@@ -2,68 +2,29 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FindMaximumTest {
-    private static final FindMaximum findMax = new FindMaximum();
+    private static FindMaximum findMax;
 
     @Test
-    public void whenGivenThreeNumbers_AndFirstNumberIsMax_ShouldReturn_true() {
-        Integer[] intArray = {3, 2, 1};
-        Integer result = findMax.findMaximum(intArray);
-        Assert.assertEquals(Integer.valueOf(3), result);
+    public void whenGivenThreeStrings_ShouldReturnMaximumString() {
+        String str1 = "Apple", str2 = "Peach", str3 = "Banana";
+        findMax = new FindMaximum(str1, str2, str3);
+        Object result = findMax.findMaximum();
+        Assert.assertEquals(str2, result);
     }
 
     @Test
-    public void whenGivenThreeNumbers_AndSecondNumberIsMax_ShouldReturn_true() {
-        Integer[] intArray = {3, 5, 1};
-        Integer result = findMax.findMaximum(intArray);
-        Assert.assertEquals(Integer.valueOf(5), result);
+    public void whenGivenThreeNumbers_ShouldReturnMaximumNumber() {
+        Integer int1 = 12, int2 = 5, int3 = 7;
+        findMax = new FindMaximum(int1, int2, int3);
+        Object result = findMax.findMaximum();
+        Assert.assertEquals(int1, result);
     }
 
     @Test
-    public void whenGivenThreeNumbers_AndThirdNumberIsMax_ShouldReturn_true() {
-        Integer[] intArray = {3, 1, 7};
-        Integer result = findMax.findMaximum(intArray);
-        Assert.assertEquals(Integer.valueOf(7), result);
-    }
-    @Test
-    public void whenGivenThreeDoubleNumbers_AndFirstNumberIsMax_ShouldReturn_true() {
-        Double [] doulbeArray = {5.8, 1.2, 3.4};
-        Double result = findMax.findMaximum(doulbeArray);
-        Assert.assertEquals(Double.valueOf(5.8), result);
-    }
-
-    @Test
-    public void whenGivenThreeDoubleNumbers_AndSecondNumberIsMax_ShouldReturn_true() {
-        Double [] doulbeArray = {5.2, 8.9, 2.1};
-        Double result = findMax.findMaximum(doulbeArray);
-        Assert.assertEquals(Double.valueOf(8.9), result);
-    }
-
-
-    @Test
-    public void whenGivenThreeDoubleNumbers_AndThirdNumberIsMax_ShouldReturn_true() {
-        Double [] doulbeArray = {5.9, 2.1, 7.6};
-        Double result = findMax.findMaximum(doulbeArray);
-        Assert.assertEquals(Double.valueOf(7.6), result);
-    }
-    @Test
-    public void whenGivenThreeStrings_AndFirstStringIsMax_ShouldReturn_true() {
-        String [] stringArray = {"Vishnu", "Vardhan", "Reddy"};
-        String result = findMax.findMaximum(stringArray);
-        Assert.assertEquals("Vishnu", result);
-    }
-
-    @Test
-    public void whenGivenThreeStrings_AndSecondStringIsMax_ShouldReturn_true() {
-        String [] stringArray = {"Kiran", "Venkat", "Reddy"};
-        String result = findMax.findMaximum(stringArray);
-        Assert.assertEquals("Venkat", result);
-    }
-
-
-    @Test
-    public void whenGivenThreeStrings_AndThirdStringIsMax_ShouldReturn_true() {
-        String [] stringArray = {"Kishore", "Jagan", "Reddy"};
-        String result = findMax.findMaximum(stringArray);
-        Assert.assertEquals("Reddy", result);
+    public void whenGivenThreeFloatNumbers_ShouldReturnMaximumFloatNumber() {
+        Float float1 = 5.7f, float2 = 3.2f, float3 = 8.1f;
+        findMax = new FindMaximum(float1, float2, float3);
+        Object result = findMax.findMaximum();
+        Assert.assertEquals(float3, result);
     }
 }
