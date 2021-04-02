@@ -1,26 +1,36 @@
 public class FindMaximum<T extends Comparable<T>> {
-    private final T x;
-    private final T z;
-    private final T y;
+    private final T p;
+    private final T q;
+    private final T r;
+    private final T s;
+    private final T t;
 
-    public FindMaximum(T x, T y, T z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public FindMaximum(T p, T q, T r, T s, T t) {
+        this.p = p;
+        this.q = q;
+        this.r = r;
+        this.s = s;
+        this.t = t;
     }
 
     public T findMaximum() {
-        return FindMaximum.findMaximum(x, y, z);
+        return FindMaximum.findMaximum(p, q, r, s, t);
     }
 
     //Single generic method to compare different types of data
-    public static <T extends Comparable> T findMaximum(T x, T y, T z) {
-        T max = x;
-        if (y.compareTo(max) > 0) {
-            max = y;
+    public static <T extends Comparable> T findMaximum(T p, T q, T r, T s, T t) {
+        T max = p;
+        if (q.compareTo(max) > 0) {
+            max = q;
         }
-        if (z.compareTo(max) > 0) {
-            max = z;
+        if (r.compareTo(max) > 0) {
+            max = r;
+        }
+        if (s.compareTo(max) > 0) {
+            max = s;
+        }
+        if (t.compareTo(max) > 0) {
+            max = t;
         }
         return max;
     }
